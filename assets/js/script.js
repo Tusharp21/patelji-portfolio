@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["backend development", "web designing", "Django web development"],
+    strings: ['Backend development', 'Full-stack development', 'Software engineering'],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -95,8 +95,8 @@ function showSkills(skills) {
     skills.forEach(skill => {
         skillHTML += `
         <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
+              <div class="info" >
+                <img style='object-fit:contain; width:60px; height:60px;' src=${skill.icon} alt="skill" />
                 <span>${skill.name}</span>
               </div>
             </div>`
