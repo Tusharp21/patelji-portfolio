@@ -1,17 +1,17 @@
 [
     {
-        "name": "Porfolio",
-        "icon": "https://frappe.io/files/frappe.png",
+        "name": "Tushar Porfolio",
+        "icon": "https://user-images.githubusercontent.com/93108145/282674733-837c995f-6720-4225-aacb-0d7f195f0e2d.jpg",
         "desc": "Portfolio Website",
-        "code": "link",
-        "view": "link"
+        "code": "https://github.com/Tusharp21/patelji-portfolio",
+        "view": "https://github.com/Tusharp21/patelji-portfolio"
     },
     {
         "name": "Bulk Image Downloader",
         "icon": "https://user-images.githubusercontent.com/93108145/237025098-86d4b631-c93d-4759-872e-6dbf84dbfe92.jpg",
         "desc": "By The Category Download Thousand's Of Image From Google IN High Quality..",
-        "code": "link",
-        "view": "link"
+        "code": "https://github.com/Tusharp21/img_downloader",
+        "view": "https://github.com/Tusharp21/img_downloader"
     },
     {
         "name": "News",
@@ -19,5 +19,19 @@
         "desc": "A Simple News Website Integrated With In-Shot News API To Show The Currenct News..",
         "code": "https://github.com/Tusharp21/news",
         "view": "https://github.com/Tusharp21/news"
+    },
+    {
+        "name": "Flipkart Books",
+        "icon": "https://user-images.githubusercontent.com/93108145/237019507-dcb93dcf-df2c-43a0-a9ac-1541c4c8b64d.jpg",
+        "desc": "Fetch All Book Details (Price, Qty, Author, Writer, Publiser) From Flipkart Books..",
+        "code": "https://github.com/Tusharp21/flipkart_books",
+        "view": "https://github.com/Tusharp21/flipkart_books"
+    },
+    {
+        "name": "Quotes Scraper",
+        "icon": "https://user-images.githubusercontent.com/93108145/237024770-c934b611-7a0e-4b19-95b5-9bcdba1e092b.jpg",
+        "desc": "Fetch All Quotes From Webpage..",
+        "code": "https://github.com/Tusharp21/quotes_scraper",
+        "view": "https://github.com/Tusharp21/quotes_scraper"
     }
 ]
