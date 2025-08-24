@@ -79,12 +79,26 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
+// async function fetchData(type = "skills") {
+//     let response
+//     type === "skills" ?
+//         response = await fetch("skills.json")
+//         :
+//         response = await fetch("projects.json")
+//     const data = await response.json();
+//     return data;
+// }
+
+// Update the fetchData function to handle work data
 async function fetchData(type = "skills") {
     let response
-    type === "skills" ?
+    if (type === "skills") {
         response = await fetch("skills.json")
-        :
+    } else if (type === "projects") {
         response = await fetch("projects.json")
+    } else if (type === "work") {
+        response = await fetch("work.json")
+    }
     const data = await response.json();
     return data;
 }
@@ -126,7 +140,6 @@ function showProjects(projects) {
       </div>
     </div>`
     });
-    console.log(projectHTML)
     projectsContainer.innerHTML = projectHTML;
 
     // <!-- tilt js effect starts -->
@@ -147,6 +160,38 @@ function showProjects(projects) {
     srtop.reveal('.work .box', { interval: 200 });
 
 }
+
+// Add new function to show work experience
+function showWork(workData) {
+    let workContainer = document.querySelector("#experience .timeline");
+    let workHTML = "";
+
+    workData.forEach((work, index) => {
+        const alignmentClass = index % 2 === 0 ? 'right' : 'left';
+
+        workHTML += `
+<div class="container ${alignmentClass}">
+    <div class="content">
+        <div class="tag">
+            <h2>${work.period}</h2>
+        </div>
+        <div class="desc">
+            <h3>${work.position}</h3>
+            <h4>${work.company}</h4>
+            <p>${work.duration}</p>
+            <p class="work-description">${work.description}</p>
+            <div class="skills-used">
+                ${work.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+            </div>
+        </div>
+    </div>
+</div>`;
+    });
+
+    workContainer.innerHTML = workHTML;
+}
+
+
 
 // function showProjects(projects) {
 //     let projectsContainer = document.querySelector("#work .box-container");
@@ -196,6 +241,10 @@ fetchData().then(data => {
 
 fetchData("projects").then(data => {
     showProjects(data);
+});
+
+fetchData("work").then(data => {
+    showWork(data);
 });
 
 // <!-- tilt js effect starts -->
